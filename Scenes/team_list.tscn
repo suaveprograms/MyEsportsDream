@@ -1,0 +1,226 @@
+[gd_scene load_steps=6 format=3 uid="uid://8kctrl2nht8a"]
+
+[ext_resource type="Script" uid="uid://d2jllt1w6jdpj" path="res://Scripts/team_list.gd" id="1_geew8"]
+[ext_resource type="Texture2D" uid="uid://dv4hqrlvb4e0b" path="res://Assets/Pictures/Esports Dream.png" id="2_erpru"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wsrvq"]
+texture = ExtResource("2_erpru")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_geew8"]
+bg_color = Color(0.0836309, 0.0862775, 0.114127, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erpru"]
+bg_color = Color(0.0902093, 0.110578, 0.127576, 1)
+
+[node name="TeamList" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_geew8")
+
+[node name="Teams" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wsrvq")
+
+[node name="Panel2" type="Panel" parent="Teams"]
+modulate = Color(1, 1, 1, 0.270588)
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+
+[node name="Panel" type="Panel" parent="Teams"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 304.0
+offset_right = 694.0
+offset_bottom = 1246.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Teams/Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 29.0
+offset_right = 637.0
+offset_bottom = 914.0
+
+[node name="TeamLeaderboardVBox" type="VBoxContainer" parent="Teams/Panel/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Teams"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 195.0
+offset_right = 633.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 60
+text = "Team Leaderboard"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 111.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 60
+text = "<"
+
+[node name="ViewTeam" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_geew8")
+
+[node name="TeamLogo" type="TextureRect" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 19.0
+offset_right = 633.0
+offset_bottom = 496.0
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Back" type="Button" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 111.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 60
+text = "<"
+
+[node name="TeamNameLabel" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_top = 496.0
+offset_right = 720.0
+offset_bottom = 559.0
+theme_override_font_sizes/font_size = 45
+text = "tEAM nAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Win_Lose" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 664.0
+offset_right = 239.0
+offset_bottom = 727.0
+theme_override_font_sizes/font_size = 45
+text = "Win/Lose:"
+vertical_alignment = 1
+
+[node name="Championships" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 590.0
+offset_right = 352.0
+offset_bottom = 653.0
+theme_override_font_sizes/font_size = 45
+text = "Championship:"
+vertical_alignment = 1
+
+[node name="Player1Label" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 761.0
+offset_right = 277.0
+offset_bottom = 810.0
+theme_override_font_sizes/font_size = 35
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Player2Label" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 838.0
+offset_right = 277.0
+offset_bottom = 887.0
+theme_override_font_sizes/font_size = 35
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Player3Label" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 917.0
+offset_right = 277.0
+offset_bottom = 966.0
+theme_override_font_sizes/font_size = 35
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Player4Label" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 1000.0
+offset_right = 277.0
+offset_bottom = 1049.0
+theme_override_font_sizes/font_size = 35
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Player5Label" type="Label" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 1078.0
+offset_right = 277.0
+offset_bottom = 1127.0
+theme_override_font_sizes/font_size = 35
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="ViewHistory" type="Button" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 1169.0
+offset_right = 239.0
+offset_bottom = 1241.0
+theme_override_font_sizes/font_size = 40
+text = "View History"
+
+[node name="Apply" type="Button" parent="ViewTeam"]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 1169.0
+offset_right = 643.0
+offset_bottom = 1241.0
+theme_override_font_sizes/font_size = 40
+text = "Apply"
+
+[node name="HistoryPanel" type="Panel" parent="ViewTeam"]
+visible = false
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_erpru")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ViewTeam/HistoryPanel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 195.0
+offset_right = 671.0
+offset_bottom = 1169.0
+
+[node name="HistoryVBox" type="VBoxContainer" parent="ViewTeam/HistoryPanel/ScrollContainer"]
+layout_mode = 2
+
+[node name="BackToTeam" type="Button" parent="ViewTeam/HistoryPanel"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 19.0
+offset_right = 156.0
+offset_bottom = 110.0
+theme_override_font_sizes/font_size = 50
+text = "<"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="ViewTeam/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ViewTeam/ViewHistory" to="." method="_on_view_history_pressed"]
+[connection signal="pressed" from="ViewTeam/Apply" to="." method="_on_apply_pressed"]
+[connection signal="pressed" from="ViewTeam/HistoryPanel/BackToTeam" to="." method="_on_back_to_team_pressed"]

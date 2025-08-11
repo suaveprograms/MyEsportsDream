@@ -1,0 +1,241 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv4g0ymp3ndu4"]
+
+[ext_resource type="Script" uid="uid://rbgg2cn22g8a" path="res://Scripts/profile.gd" id="1_ge2pj"]
+[ext_resource type="Texture2D" uid="uid://dv4hqrlvb4e0b" path="res://Assets/Pictures/Esports Dream.png" id="2_b77ww"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yml3r"]
+texture = ExtResource("2_b77ww")
+
+[node name="Profile" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ge2pj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_yml3r")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+modulate = Color(1, 1, 1, 0.513726)
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+
+[node name="fname" type="Label" parent="Panel"]
+layout_mode = 0
+offset_top = 91.0
+offset_right = 720.0
+offset_bottom = 167.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Full name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ign" type="Label" parent="Panel"]
+layout_mode = 0
+offset_top = 167.0
+offset_right = 720.0
+offset_bottom = 243.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Full name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 527.0
+offset_right = 124.0
+offset_bottom = 582.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Role:"
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 599.0
+offset_right = 138.0
+offset_bottom = 654.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Skills:"
+vertical_alignment = 1
+
+[node name="Skills" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 599.0
+offset_right = 256.0
+offset_bottom = 654.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Skills:"
+vertical_alignment = 1
+
+[node name="Role" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 527.0
+offset_right = 234.0
+offset_bottom = 582.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Role:"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 461.0
+offset_right = 147.0
+offset_bottom = 516.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Team:"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 398.0
+offset_right = 139.0
+offset_bottom = 453.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "MMR:"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 265.0
+offset_right = 112.0
+offset_bottom = 320.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Age:"
+vertical_alignment = 1
+
+[node name="WinLose" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 265.0
+offset_right = 505.0
+offset_bottom = 320.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Win:"
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 330.0
+offset_right = 112.0
+offset_bottom = 385.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Region:"
+vertical_alignment = 1
+
+[node name="AgeLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 265.0
+offset_right = 196.0
+offset_bottom = 320.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Age"
+vertical_alignment = 1
+
+[node name="RegionLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 330.0
+offset_right = 251.0
+offset_bottom = 385.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Region"
+vertical_alignment = 1
+
+[node name="mmr" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 398.0
+offset_right = 289.0
+offset_bottom = 453.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Default"
+vertical_alignment = 1
+
+[node name="Team" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 461.0
+offset_right = 231.0
+offset_bottom = 516.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "NA"
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 60
+text = "<"
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 773.0
+offset_right = 696.0
+offset_bottom = 1252.0
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 95.0
+offset_right = 588.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 60
+text = "Career"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 83.0
+offset_right = 649.0
+offset_bottom = 442.0
+
+[connection signal="pressed" from="Panel/Back" to="." method="_on_back_pressed"]

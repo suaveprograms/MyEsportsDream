@@ -1,0 +1,150 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcqayj8shigpp"]
+
+[ext_resource type="Script" uid="uid://c68pcaefrsxmh" path="res://Scripts/playlobby.gd" id="1_hhqdk"]
+[ext_resource type="Texture2D" uid="uid://d2sejbl2vxamg" path="res://Assets/Pictures/bg.png" id="2_cfxdw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvpeg"]
+texture = ExtResource("2_cfxdw")
+
+[node name="Playlobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hhqdk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_uvpeg")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 1280.0
+
+[node name="Playranked" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 962.0
+offset_right = 552.0
+offset_bottom = 1111.0
+theme_override_font_sizes/font_size = 60
+text = "Play Ranked"
+
+[node name="back" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 20.0
+offset_right = 140.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 60
+text = "<"
+
+[node name="ign" type="Label" parent="Panel"]
+layout_mode = 0
+offset_top = 158.0
+offset_right = 720.0
+offset_bottom = 245.0
+theme_override_font_sizes/font_size = 60
+text = "IGN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 267.0
+offset_right = 203.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 60
+text = "MMR:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 354.0
+offset_right = 203.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 60
+text = "Rank:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RankLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 354.0
+offset_right = 369.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 60
+text = "Rank:"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 438.0
+offset_right = 191.0
+offset_bottom = 525.0
+theme_override_font_sizes/font_size = 60
+text = "Role:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 520.0
+offset_right = 203.0
+offset_bottom = 607.0
+theme_override_font_sizes/font_size = 60
+text = "Playstyle:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MatchStatusLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 822.0
+offset_right = 535.0
+offset_bottom = 909.0
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mmr" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 267.0
+offset_right = 363.0
+offset_bottom = 354.0
+theme_override_font_sizes/font_size = 60
+text = "MMR"
+vertical_alignment = 1
+
+[node name="role" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 438.0
+offset_right = 330.0
+offset_bottom = 525.0
+theme_override_font_sizes/font_size = 60
+text = "MMR"
+vertical_alignment = 1
+
+[node name="PlaystyleOptionButton" type="OptionButton" parent="Panel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 626.0
+offset_right = 405.0
+offset_bottom = 737.0
+theme_override_font_sizes/font_size = 40
+
+[connection signal="pressed" from="Panel/Playranked" to="." method="_on_playranked_pressed"]
+[connection signal="pressed" from="Panel/back" to="." method="_on_back_pressed"]

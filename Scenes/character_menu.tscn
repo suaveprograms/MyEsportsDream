@@ -1,0 +1,161 @@
+[gd_scene load_steps=4 format=3 uid="uid://byw7gp7waja08"]
+
+[ext_resource type="Script" uid="uid://c8uvwxp1fvyx7" path="res://Scripts/character_menu.gd" id="1_n6mxt"]
+[ext_resource type="Texture2D" uid="uid://buucq342ymgm3" path="res://Assets/Pictures/bg3.png" id="2_k8yv0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wolrq"]
+texture = ExtResource("2_k8yv0")
+
+[node name="CharacterMenu" type="Node2D"]
+script = ExtResource("1_n6mxt")
+
+[node name="Characters" type="Panel" parent="."]
+offset_right = 725.0
+offset_bottom = 1280.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wolrq")
+
+[node name="Panel" type="Panel" parent="Characters"]
+layout_mode = 0
+offset_right = 725.0
+offset_bottom = 1280.0
+
+[node name="Label" type="Label" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 39.0
+offset_right = 696.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 40
+text = "Ready to be a Pro E-sports Player?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 212.0
+offset_right = 271.0
+offset_bottom = 261.0
+theme_override_font_sizes/font_size = 35
+text = "Who are you?"
+vertical_alignment = 1
+
+[node name="fname" type="LineEdit" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 286.0
+offset_right = 564.0
+offset_bottom = 369.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Full Name"
+
+[node name="Label3" type="Label" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 407.0
+offset_right = 271.0
+offset_bottom = 456.0
+theme_override_font_sizes/font_size = 35
+text = "Your Ingame Name?"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 604.0
+offset_right = 271.0
+offset_bottom = 653.0
+theme_override_font_sizes/font_size = 35
+text = "Your Gender?"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 757.0
+offset_right = 355.0
+offset_bottom = 806.0
+theme_override_font_sizes/font_size = 35
+text = "Your Ingame Role?"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 911.0
+offset_right = 355.0
+offset_bottom = 960.0
+theme_override_font_sizes/font_size = 35
+text = "Region?"
+vertical_alignment = 1
+
+[node name="ign" type="LineEdit" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 481.0
+offset_right = 564.0
+offset_bottom = 564.0
+theme_override_font_sizes/font_size = 30
+placeholder_text = "Desired ingame name"
+
+[node name="gender" type="OptionButton" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 653.0
+offset_right = 266.0
+offset_bottom = 730.0
+theme_override_font_sizes/font_size = 30
+item_count = 3
+popup/item_0/text = "Male"
+popup/item_0/id = 0
+popup/item_1/text = "Female"
+popup/item_1/id = 1
+popup/item_2/text = "Other"
+popup/item_2/id = 2
+
+[node name="region" type="OptionButton" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 988.0
+offset_right = 266.0
+offset_bottom = 1065.0
+theme_override_font_sizes/font_size = 30
+item_count = 6
+popup/item_0/text = "NA"
+popup/item_0/id = 0
+popup/item_1/text = "EU"
+popup/item_1/id = 1
+popup/item_2/text = "KR"
+popup/item_2/id = 2
+popup/item_3/text = "CN"
+popup/item_3/id = 3
+popup/item_4/text = "SEA"
+popup/item_4/id = 4
+popup/item_5/text = "BR"
+popup/item_5/id = 5
+
+[node name="role" type="OptionButton" parent="Characters"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 806.0
+offset_right = 266.0
+offset_bottom = 883.0
+theme_override_font_sizes/font_size = 30
+item_count = 3
+popup/item_0/text = "Dps"
+popup/item_0/id = 0
+popup/item_1/text = "Tank"
+popup/item_1/id = 1
+popup/item_2/text = "Support"
+popup/item_2/id = 2
+
+[node name="Startgame" type="Button" parent="Characters"]
+layout_mode = 0
+offset_left = 217.0
+offset_top = 1114.0
+offset_right = 514.0
+offset_bottom = 1237.0
+theme_override_font_sizes/font_size = 60
+text = "Start"
+
+[connection signal="pressed" from="Characters/Startgame" to="." method="_on_startgame_pressed"]

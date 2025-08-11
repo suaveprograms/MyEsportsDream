@@ -1,0 +1,100 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy8a1b0srox2u"]
+
+[ext_resource type="Script" uid="uid://h328gg1owl16" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://buucq342ymgm3" path="res://Assets/Pictures/bg3.png" id="2_48xlc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ehe0"]
+texture = ExtResource("2_48xlc")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_48xlc"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_28flt")
+
+[node name="Main" type="Panel" parent="."]
+offset_left = -33.0
+offset_top = -19.0
+offset_right = 735.0
+offset_bottom = 1282.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1ehe0")
+
+[node name="Panel" type="Panel" parent="Main"]
+modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 19.0
+offset_right = 768.0
+offset_bottom = 1301.0
+
+[node name="Label" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 78.0
+offset_right = 763.0
+offset_bottom = 301.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "My 
+Esports Dream!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 1254.0
+offset_right = 744.0
+offset_bottom = 1296.0
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0.239216, 0.239216, 1)
+theme_override_font_sizes/font_size = 30
+text = "Version: 1.0.2/2025"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Main"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 1254.0
+offset_right = 228.0
+offset_bottom = 1296.0
+theme_override_colors/font_shadow_color = Color(0, 0, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0.239216, 0.239216, 1)
+theme_override_font_sizes/font_size = 30
+text = "©PrettyBoyEris"
+horizontal_alignment = 1
+
+[node name="Start" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 371.0
+offset_right = 552.0
+offset_bottom = 488.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+theme_override_icons/icon = SubResource("ViewportTexture_48xlc")
+text = "Start"
+
+[node name="Load" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 576.0
+offset_right = 552.0
+offset_bottom = 693.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Load
+"
+
+[node name="Quit" type="Button" parent="Main"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 793.0
+offset_right = 552.0
+offset_bottom = 910.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[connection signal="pressed" from="Main/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Main/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,263 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2wpkvshmip4x"]
+
+[ext_resource type="Script" uid="uid://q5wyumkbicjk" path="res://Scripts/game.gd" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://dv4hqrlvb4e0b" path="res://Assets/Pictures/Esports Dream.png" id="2_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://dhb4nmqd71gw2" path="res://Assets/Pictures/tournamentposter.png" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://cd5ulmrv1vpuu" path="res://Assets/Pictures/applied.png" id="4_3dryh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wrm1d"]
+texture = ExtResource("2_qxrlw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dryh"]
+texture = ExtResource("3_wrm1d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wowpa"]
+texture = ExtResource("4_3dryh")
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_ebmjs")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 729.0
+offset_bottom = 1291.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wrm1d")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+modulate = Color(1, 1, 1, 0.635294)
+layout_mode = 0
+offset_right = 729.0
+offset_bottom = 1291.0
+
+[node name="Name" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 147.0
+offset_right = 696.0
+offset_bottom = 216.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Welcome to One Sword!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Energy" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 18.0
+offset_right = 709.0
+offset_bottom = 73.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 16.0
+offset_right = 635.0
+offset_bottom = 71.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Energy:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 16.0
+offset_right = 119.0
+offset_bottom = 71.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Year:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Year" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 18.0
+offset_right = 157.0
+offset_bottom = 73.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 1
+
+[node name="Week" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 73.0
+offset_right = 171.0
+offset_bottom = 128.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+vertical_alignment = 1
+
+[node name="Week1" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 71.0
+offset_right = 119.0
+offset_bottom = 126.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Week:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 223.0
+offset_right = 699.0
+offset_bottom = 830.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 88.0
+offset_right = 645.0
+offset_bottom = 570.0
+
+[node name="News" type="VBoxContainer" parent="Panel/Panel/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label3" type="Label" parent="Panel/Panel"]
+layout_mode = 0
+offset_left = 280.0
+offset_right = 387.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 40
+text = "News"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextWeek" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 850.0
+offset_right = 529.0
+offset_bottom = 934.0
+theme_override_font_sizes/font_size = 55
+text = "Next Week"
+
+[node name="Play" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 957.0
+offset_right = 209.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 55
+text = "Play"
+
+[node name="Profile" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 957.0
+offset_right = 456.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 55
+text = "Profile"
+
+[node name="Teams" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 957.0
+offset_right = 680.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 55
+text = "Teams"
+
+[node name="Leaderboards" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 1066.0
+offset_right = 397.0
+offset_bottom = 1162.0
+theme_override_font_sizes/font_size = 55
+text = "Leaderboards"
+
+[node name="Tournament" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 1175.0
+offset_right = 399.0
+offset_bottom = 1271.0
+theme_override_font_sizes/font_size = 55
+text = "Tournament"
+
+[node name="TournamentPoster" type="Panel" parent="."]
+visible = false
+offset_right = 729.0
+offset_bottom = 1291.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3dryh")
+
+[node name="CloseButton" type="Button" parent="TournamentPoster"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 92.0
+offset_right = 119.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 30
+text = "Close"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TournamentPoster"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 1127.0
+offset_right = 696.0
+offset_bottom = 1274.0
+
+[node name="TopTeamsHBox" type="HBoxContainer" parent="TournamentPoster/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="JoinedTeam" type="Panel" parent="."]
+visible = false
+offset_right = 729.0
+offset_bottom = 1291.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wowpa")
+
+[node name="JoinedLogo" type="TextureRect" parent="JoinedTeam"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 16.0
+offset_right = 578.0
+offset_bottom = 441.0
+expand_mode = 1
+
+[node name="JoinedLabel" type="Label" parent="JoinedTeam"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 441.0
+offset_right = 655.0
+offset_bottom = 1247.0
+theme_override_font_sizes/font_size = 30
+
+[node name="CloseTeam" type="Button" parent="JoinedTeam"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 117.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 50
+text = "X"
+
+[connection signal="pressed" from="Panel/NextWeek" to="." method="_on_next_week_pressed"]
+[connection signal="pressed" from="Panel/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Panel/Profile" to="." method="_on_profile_pressed"]
+[connection signal="pressed" from="Panel/Teams" to="." method="_on_teams_pressed"]
+[connection signal="pressed" from="Panel/Leaderboards" to="." method="_on_leaderboards_pressed"]
+[connection signal="pressed" from="Panel/Tournament" to="." method="_on_tournament_pressed"]
+[connection signal="pressed" from="TournamentPoster/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="JoinedTeam/CloseTeam" to="." method="_on_close_team_pressed"]

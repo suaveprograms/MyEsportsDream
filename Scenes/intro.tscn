@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://qvcftlmwmps3"]
+
+[ext_resource type="Script" uid="uid://bciljbepv8nhe" path="res://Scripts/intro.gd" id="1_duh1u"]
+[ext_resource type="Texture2D" uid="uid://dmqwg2t2i30gh" path="res://Assets/Pictures/intro.png" id="2_duh1u"]
+
+[sub_resource type="Animation" id="Animation_geirw"]
+resource_name = "Fade In"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.99),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.4, 0.768627, 1), Color(1, 0.4, 0.768627, 0.866667)]
+}
+
+[sub_resource type="Animation" id="Animation_rsiac"]
+resource_name = "Fade Out"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2, 3.02, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 0.4, 0.768627, 0.74902), Color(1, 0.4, 0.768627, 0.380392), Color(1, 0.4, 0.768627, 0.184314), Color(1, 0.4, 0.768627, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hwjxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.4, 0.768627, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3bmuq"]
+_data = {
+&"Fade In": SubResource("Animation_geirw"),
+&"Fade Out": SubResource("Animation_rsiac"),
+&"RESET": SubResource("Animation_hwjxs")
+}
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_duh1u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(360, 620)
+scale = Vector2(0.666667, 0.694531)
+texture = ExtResource("2_duh1u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -34.0
+offset_top = -40.0
+offset_right = 751.0
+offset_bottom = 1327.0
+color = Color(1, 0.4, 0.768627, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3bmuq")
+}
+autoplay = "Fade In"
